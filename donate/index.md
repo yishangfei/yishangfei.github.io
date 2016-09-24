@@ -8,8 +8,6 @@ header: 打赏
 ------------------------------
 <hr>
 
-如果您喜欢这个博客，读后觉得收获很大...
-
 如果在你开发或学习过程中本博客帮助到了你...
 
 你可以对本博客[小额赞助]({{ '/donate/method' | prepend: site.baseurl }})一下，让我有动力继续写出更高质量的文章。
@@ -30,7 +28,7 @@ header: 打赏
 <hr>
 您可以选择手机支付宝扫一扫
 
-<img src="{{ '/styles/images/zhifubao.jpg' | prepend: site.baseurl }}" alt="支付宝二维码付款给Freud" width="310" />
+<img src="{{ '/styles/images/zhifubao.jpg' | prepend: site.baseurl }}" alt="支付宝二维码付款给易大宝" width="310" />
 
 <br>
 <br>
@@ -41,7 +39,7 @@ header: 打赏
 <hr>
 您可以选择手机微信扫一扫
 
-![微信二维码付款给Freud]({{ '/styles/images/weixin.jpg' | prepend: site.baseurl }})
+<img src="{{ '/styles/images/weixin.jpg' | prepend: site.baseurl }}" alt="微信二维码付款给易大宝" width="310" />
 
 <br>
 <br>
