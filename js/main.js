@@ -68,34 +68,10 @@ init.hideWelcome();
 init.showMain();
 init.setStyle();
 var timerBodyScroll;
-$.mouseWheel('body', function (delta) {
-    if (delta < 0) {
-        scrollInertia(200)
-    }
-    else if (delta > 0) {
-        scrollInertia(0)
-    };
-})
 $.mouseWheel('body', function (delta, target) {
     imageScroll.onMouseWheel(100, delta/120)
 })
-function scrollInertia (target) {
-    var speed = 0;
-    var nowScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    clearInterval(timerBodyScroll);
-    timerBodyScroll = setInterval(function () {
-        if (nowScrollTop == target) {
-                clearInterval(timerBodyScroll);
-            } else {
-                speed = (target-nowScrollTop)/50;
-                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed)
-                nowScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                nowScrollTop += speed;
-                document.documentElement.scrollTop = nowScrollTop;
-                document.body.scrollTop = nowScrollTop;
-            }
-        },1)
-}
+
 
 var ImageScroll = function (parent, children, distance) {
     var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
