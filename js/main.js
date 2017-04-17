@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
 var defaults = {
     welcome: 'welcome',
     main: 'home-page',
@@ -57,7 +57,7 @@ var init = {
         var main = document.getElementById(defaults.main);
         var timer = setTimeout(function () {
             fadeIn(main, 30)
-        }, 4000)
+        }, 1000)
     },
     setStyle: function () {
 
