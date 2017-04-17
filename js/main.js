@@ -50,14 +50,14 @@ var init = {
     hideWelcome: function () {
         var welcome = document.getElementById(defaults.welcome);
         var timer = setTimeout(function () {
-            fadeOut(welcome, 50)
-        }, 500)
+            fadeOut(welcome, 40)
+        }, 1000)
     },
     showMain: function () {
         var main = document.getElementById(defaults.main);
         var timer = setTimeout(function () {
             fadeIn(main, 30)
-        }, 4000)
+        }, 2500)
     },
     setStyle: function () {
 
