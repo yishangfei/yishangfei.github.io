@@ -51,13 +51,13 @@ var init = {
         var welcome = document.getElementById(defaults.welcome);
         var timer = setTimeout(function () {
             fadeOut(welcome, 50)
-        }, 1000)
+        }, 500)
     },
     showMain: function () {
         var main = document.getElementById(defaults.main);
         var timer = setTimeout(function () {
             fadeIn(main, 30)
-        }, 1000)
+        }, 4000)
     },
     setStyle: function () {
 

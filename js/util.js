@@ -1,5 +1,3 @@
-//删除掉了测试用例
-
 //判断arr是否为一个数组，并返回一个bool值
 function isArray (arr) {
     var result = arr instanceof Array;
