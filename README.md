@@ -1,6 +1,6 @@
 # 我的主页
 
-易大宝的[个人主页](http://yishangfei.me)
+[易大宝的个人主页](http://yishangfei.me)
 
 对底部footer的链接进行删除.
 
