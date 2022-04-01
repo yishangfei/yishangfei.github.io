@@ -41,6 +41,11 @@
 
     function getRequest() {
         var url = window.location.search; //获取url中"?"符后的字串
+     
+        if (url.charAt(url.length-1)=="/"){//反正github跳转自动加/
+            url=url.substring(0,url.length-1)
+        }
+        
         var theRequest = new Object();
         if (url.indexOf("?") != -1) {
             var str = url.substr(1);
