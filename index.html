@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>非礼勿视</title>
+    <link rel="shortcut icon"
+          href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/no-one-under-eighteen_1f51e.png">
+</head>
+<body>
+<div style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;">
+    <div style="font-size:80px;align-items: center;display: flex;height: 100%;width: 100%;justify-content: center;">
+        <strong>
+            <span id="name" style="color:red">易大宝</span><span style="color:red">禁止访问</span><span id="content"
+                                                                                                 style="color:black"></span>
+        </strong>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var i = 0;
+    var colors = new Array("red", "orange", "yellow", "green","cyan", "blue", "purple");
+
+    document.getElementById("content").innerHTML = getRequest().content
+
+    changeColor();
+
+    async function changeColor() {
+        while (true){
+            console.log(`Waiting ${i} seconds...`)
+            document.getElementById("name").style.color = colors[i]
+            await sleep(1500)
+            i++
+            if (i==7){
+                i=0
+            }
+        }
+    }
+
+    function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time)).then();
+    }
+
+    function getRequest() {
+        var url = window.location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                //就是这句的问题
+                theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
+                //之前用了unescape()
+                //才会出现乱码
+            }
+        }
+        return theRequest;
+    }
+</script>
+</body>
+</html>
