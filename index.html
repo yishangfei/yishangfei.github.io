@@ -17,20 +17,20 @@
 
 <script type="text/javascript">
     var i = 0;
-    var colors = new Array("red", "orange", "yellow", "green","cyan", "blue", "purple");
+    var colors = new Array("red", "orange", "yellow", "green", "cyan", "blue", "purple");
 
     document.getElementById("content").innerHTML = getRequest().content
 
     changeColor();
 
     async function changeColor() {
-        while (true){
+        while (true) {
             console.log(`Waiting ${i} seconds...`)
             document.getElementById("name").style.color = colors[i]
             await sleep(1500)
             i++
-            if (i==7){
-                i=0
+            if (i == 7) {
+                i = 0
             }
         }
     }
@@ -40,21 +40,18 @@
     }
 
     function getRequest() {
-        var url = window.location.search; //获取url中"?"符后的字串
-     
-        if (url.charAt(url.length-1)=="/"){//反正github跳转自动加/
-            url=url.substring(0,url.length-1)
+        var url = decodeURI(window.location.search); //获取url中"?"符后的字串
+
+        console.log(url)
+        if (url.indexOf("知乎") || url.indexOf("微博") != -1) {
+            url = url.substring(0, url.indexOf("=") + 3)
         }
-        
         var theRequest = new Object();
         if (url.indexOf("?") != -1) {
             var str = url.substr(1);
             strs = str.split("&");
             for (var i = 0; i < strs.length; i++) {
-                //就是这句的问题
-                theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
-                //之前用了unescape()
-                //才会出现乱码
+                theRequest[strs[i].split("=")[0]] = strs[i].split("=")[1];
             }
         }
         return theRequest;
