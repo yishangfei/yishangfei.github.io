@@ -26,20 +26,73 @@
     </head>
     <body style="background-color: black;">
        <div class="globe">
-        <img src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_img1.png"
+        <img src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_logo.png"
          style="width: 15%;margin-top: 2%;">
         <br/>
-        <img src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_img2.png"
+        <img id="photo1" src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us.png"
          style="width: 85%;margin-top: 3%;">
         <br/>
-        <a href="mailto:smartwatchus@fituuu.com" class="btn">Contact us</a>
+        <a id="url" href="mailto:smartwatchus@fituuu.com" class="btn">Contact us</a>
         <br/> 
-        <img src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_img3.png"
+        <img  id="photo2" src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us_tips.png"
         style="width: 85%;margin-top: 8%;">
         <br/>
-        <img src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_img4.png"
+        <img  id="photo3" src="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us_refund.png"
         style="width: 85%;margin-top: 2%;">
 
        </div>
+
+       <script type="text/javascript">
+        var arr=new Array();    //图片列表
+        arr[0]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us.png";
+        arr[1]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us_tips.png";
+        arr[2]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_us_refund.png";
+        arr[3]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_uk.png";
+        arr[4]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_uk_tips.png";
+        arr[5]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_uk_refund.png";
+        arr[6]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_europe.png";
+        arr[7]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_europe_tips.png";
+        arr[8]="https://raw.iqiq.io/yishangfei/yishangfei.github.io/master/img/ic_europe_refund.png";
+
+        function setting_photos()
+        {
+            var photo1=document.getElementById("photo1");
+            var photo2=document.getElementById("photo2");
+            var photo3=document.getElementById("photo3");
+            var url  =document.getElementById("url")
+            if (getQueryVariable("region")=="us") 
+            {
+                photo1.src=arr[0];
+                photo2.src=arr[1];
+                photo3.src=arr[2];
+                url.href="mailto:smartwatchus@fituuu.com"
+            }else if(getQueryVariable("region")=="uk"){
+                photo1.src=arr[3];
+                photo2.src=arr[4];
+                photo3.src=arr[5];
+                url.href="mailto:uk@520wear.com"
+            }else {
+                photo1.src=arr[6];
+                photo2.src=arr[7];
+                photo3.src=arr[8];
+                url.href="mailto:warranty@imfrchcs.de"
+            }
+        }
+
+        setting_photos()
+        
+        // getRequest().content
+        console.log(getQueryVariable("region"))
+
+        function getQueryVariable(variable){
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+                }
+            return(false);
+        }
+    </script>
     </body>
 </html>
