@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Basic Long Sleeve",
+      "price": "$60.00",
+      "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+      "details": [
+        "Water-resistant fabric with soft lycra detailing inside",
+        "Clean zip-front, and three piece hood",
+        "Subtle branding and diagonal panel detail"
+      ],
+      "image": "assets/images/apro101-1-600x778.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Basic Long Sleeve",
+      "price": "60.00",
+      "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+      "details": [
+        "Water-resistant fabric with soft lycra detailing inside",
+        "Clean zip-front, and three piece hood",
+        "Subtle branding and diagonal panel detail"
+      ],
+      "image": "assets/images/apro101-1-600x778.jpg"
+    }
+  ]
