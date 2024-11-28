@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="product-inner tooltip-left">
               <div class="product-thumb">
                  <a class="thumb-link" href="single-product.html?product_id=${product.id}">
-                  <img class="img-responsive" src="${product.image}" alt="${product.name}" width="600" height="778">
+                  <img class="img-responsive" src="${product.images[0]}" alt="${product.name}" width="600" height="778">
                 </a>
                 <div class="flash">
                   <span class="onnew"><span class="text">New</span></span>
