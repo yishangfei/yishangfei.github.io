@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+
+    <meta charset="UTF-8">
+    <title>易大宝的个人主页</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.yishangfei.xyz/img/icon.ico">
+    <link rel="stylesheet" href="css/default.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+	 	<script>
+		window.onload=function(){
+			var img=document.getElementsByTagName('img'),host="https://images.yishangfei.xyz/";
+			for(var i=0;i<img.length;i++){
+				img[i].setAttribute('src',host+img[i].getAttribute('src'))
+			}
+		}
+	</script>
+</head>
+<body >
+<canvas id="welcome"></canvas>
+
+<span style="font-size:24px;"><style type="text/css">  
+body{  
+    overflow-x: hidden;  
+    overflow-y: hidden;  
+}  
+</style></span>  
+
+<div id="home-page" data-ownuser="@yishangfei">
+    <div id="intro">
+        <div id="main-white">
+            <section>
+                <h1 class="title">大宝</h1>
+                <ul id="navigation">
+		    <li class="transparent-overlay" id="bolg" style="margin-right:60px">
+			<a href="https://yishangfei.github.io/blog/">
+                            <img src="img/blog.png" alt="博客">
+                        </a>
+			</li>
+                    <li class="transparent-overlay" id="resume">
+                        <a target="_blank" href="https://yishangfei.github.io/Resume/">
+                            <img src="img/resume.png" alt="简历">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div> <!-- end of intro -->
+    <section id="images">
+        <ul id="images-wrapper">
+		<li>
+                <p>易大宝</p>
+                <img src="img/易大宝2.jpg" alt="">
+            </li>
+		<li>
+                <p>程璧</p>
+                <img src="img/程璧.jpg" alt="">
+            </li>
+<!-- 			<li>
+                <p>易大宝</p>
+                <img src="img/易大宝.jpg" alt="">
+            </li>
+			<li>
+                <p>易大宝</p>
+                <img src="img/易大宝1.jpg" alt="">
+            </li> -->
+        </ul>
+    </section>
+</div> 
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
